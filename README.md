@@ -1,9 +1,14 @@
 #USERS
 ```
+Users service is responsible for finding the users by username and password.
+
+    First you need to downgrade java version from java-11 to java-8
+
 # apt update
+# apt-get remove openjdk-11-jdk-headless
 # apt-get install openjdk-8-jdk
 # java -version
-# apt install mavn
+# apt install maven
 
     Now, go and fetch git code
 
@@ -14,7 +19,7 @@
 
     Start service now
 
-# vi /etc/systemd/system/users.service
+# mv /root/users/systemd.service /etc/systemd/system/users.service
 # systemctl daemon-reload
 # systemctl start users
 # systemctl enable users
