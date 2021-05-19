@@ -13,7 +13,8 @@ label 'NODEJS'
        stage('Prepare Artifacts'){
                 steps {
                 sh '''
-                zip -r users.zip users-api-0.0.1.jar
+                cp target/*.jar users.jar
+                zip -r users.zip users.jar
                 '''
                 }
                 }
