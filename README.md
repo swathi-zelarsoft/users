@@ -23,5 +23,5 @@ Users service is responsible for finding the users by username and password.
 # systemctl daemon-reload
 # systemctl start users
 # systemctl enable users
-
 ```
+#RELEASE TAG 0.0.1
