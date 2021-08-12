@@ -6,5 +6,6 @@ COPY        pom.xml .
 RUN         mvn package
 FROM        openjdk:8-jre-slim
 COPY        --from=BUILD /app/target/users-api-0.0.1.jar users.jar
+ENV         SERVER_PORT=8080
 CMD         ["java", "-jar", "users.jar"]
 EXPOSE      8080/tcp
